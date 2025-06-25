@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <!-- Mobile Metas -->
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+  <!-- Site Metas -->
+  <meta content="" name="keywords"/>
+  <meta content="" name="description"/>
+  <meta content="" name="author"/>
+  <link href="images/favicon.png" rel="shortcut icon" type=""/>
+  <title>Feane</title>
+  <!-- bootstrap core css -->
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+  <!--owl slider stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" type="text/css"/>
+  <!-- nice select  -->
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" rel="stylesheet">
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet"/>
+  <!-- Custom styles for this template -->
+  <link href="css/style2.css" rel="stylesheet"/>
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet"/>
+
+  <!-- Inline CSS for Cart Notification and other adjustments -->
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <div class="bg-box">
+      <img alt="" src="images/hero-bg.jpg"/>
+    </div>
+    
+    <!-- header section starts -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <span>NOKOJO</span>
+          </a>
+          <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="menunew.html">Menu <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="book.html">Book</a>
+              </li>
+            </ul>
+            
+            <div class="user_option">
+              <a class="login_btn" href="login.html">
+                <i class="fa fa-user"></i>
+              </a>
+              
+              <form class="form-inline">
+                <button class="btn my-2 my-sm-0 nav_search-btn" type="submit">
+                  <i aria-hidden="true" class="fa fa-search"></i>
+                </button>
+              </form>
+
+              <a class="cart_link" href="#" onclick="toggleCart()">
+                <svg id="Capa_1" style="enable-background:new 0 0 456.029 456.029;" version="1.1" viewbox="0 0 456.029 456.029" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+                  <g>
+                    <g>
+                      <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z"></path>
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4C457.728,97.71,450.56,86.958,439.296,84.91z"></path>
+                    </g>
+                  </g>
+                  <g>         
+                    <g>
+                      <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z"></path>
+                    </g>
+                  </g>
+                </svg>
+                <span id="cart-count" class="cart-count">0</span>
+              </a>
+              
+              <a class="order_online" href="">Order Online</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- food section -->
+  <section class="food_section">
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-3 col-lg-2 p-4 sidebar bg-light" id="sidebar">
+          <h6><i class="fas fa-coffee"></i> Drinks</h6>
+          <a class="nav-link active" href="#" data-category="hot-coffee">Hot Coffee</a>
+          <a class="nav-link" href="#" data-category="hot-tea">Hot Tea</a>
+          <a class="nav-link" href="#" data-category="cold-coffee">Cold Coffee</a>
+          <a class="nav-link" href="#" data-category="refreshers">Refreshers</a>
+          <h6><i class="fas fa-utensils"></i>Food</h6>
+          <a class="nav-link" href="#" data-category="breakfast">Breakfast</a>
+          <a class="nav-link" href="#" data-category="bakery">Bakery</a>
+          <a class="nav-link" href="#" data-category="lunch">Lunch</a>
+        </nav>
+
+        <div class="col-md-9 col-lg-10" id="food-content">
+          <div class="heading_container heading_center">
+            <h2 id="category-title">Our Menu</h2>
+          </div>
+          
+          <div class="container">
+            <!-- Category Description (Optional, can be re-added if needed) -->
+            <div id="category-description" class="category-description" style="display: none;">
+              <h4></h4>
+              <p></p>
+            </div>
+
+            <ul class="filters_menu" id="filters-menu">
+              <!-- Filter items will be loaded here dynamically -->
+            </ul>
+            
+            <div class="filters-content">
+              <div class="row grid" id="menu-items">
+                <!-- Menu items will be loaded here by JavaScript -->
+              </div>
+            </div>
+          </div>
+
+          <div id="loading" class="loading" style="display: none;">
+            <i class="fas fa-spinner"></i>
+            <p>Loading delicious items...</p>
+          </div>
+
+          <div id="empty-state" class="empty-state" style="display: none;">
+            <i class="fas fa-utensils"></i>
+            <h3>Coming Soon</h3>
+            <p>This category is being prepared. Check back soon for delicious options!</p>
+          </div>
+
+          <!-- View More Button -->
+          <div class="btn-box">
+            <a href="">
+              View More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- end food section -->
+
+    <!-- Cart Notification (Moved outside food_section for better positioning control) -->
+    <div id="cart-notification" class="cart-notification">
+      <i class="fas fa-check-circle"></i>
+      <span id="notification-text">Item added to cart!</span>
+    </div>
+
+    <!-- footer section -->
+    <footer class="footer_section">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="col-md-4 footer-col">
+                    <div class="footer_contact">
+                        <h4>Contact Us</h4>
+                        <div class="contact_link_box">
+                            <a href="">
+                                <i aria-hidden="true" class="fa fa-map-marker"></i>
+                                <span>Location</span>
+                            </a>
+                            <a href="">
+                                <i aria-hidden="true" class="fa fa-phone"></i>
+                                <span>Call +01 1234567890</span>
+                            </a>
+                            <a href="">
+                                <i aria-hidden="true" class="fa fa-envelope"></i>
+                                <span>demo@gmail.com</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Details -->
+                <div class="col-md-4 footer-col">
+                    <div class="footer_detail">
+                        <a class="footer-logo" href="">NOKOJO</a>
+                        <p>Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with</p>
+                        <div class="footer_social">
+                            <a href="">
+                                <i aria-hidden="true" class="fa fa-facebook"></i>
+                            </a>
+                            <a href="">
+                                <i aria-hidden="true" class="fa fa-twitter"></i>
+                            </a>
+                            <a href="">
+                                <i aria-hidden="true" class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="">
+                                <i aria-hidden="true" class="fa fa-instagram"></i>
+                            </a>
+                            <a href="">
+                                <i aria-hidden="true" class="fa fa-pinterest"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Opening Hours -->
+                <div class="col-md-4 footer-col">
+                    <h4>Opening Hours</h4>
+                    <p>Everyday</p>
+                    <p>10.00 Am - 10.00 Pm</p>
+                </div>
+            </div>
+
+            <!-- Footer Info -->
+            <div class="footer-info">
+                <p>
+                    © <span id="displayYear"></span> All Rights Reserved By
+                    <a href="https://html.design/">GROUP GACOR</a><br/><br/>
+                    © <span id="displayYear"></span> Distributed By
+                    <a href="https://themewagon.com/" target="_blank">NOKOJO</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section -->
+
+    <!-- JavaScript Files -->
+    <!-- jQuery -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.js"></script>
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Isotope JS -->
+    <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+    <!-- imagesLoaded JS (PENTING untuk Isotope dengan gambar dinamis) -->
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <!-- Nice Select -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/custom.js"></script>
+    <!-- Google Maps (if used) -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.6/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script for Sidebar Navigation and Menu Logic -->
+    <script>
+      // Global Variables
+      let cart = [];
+      let cartCount = 0;
+      let $grid; // Declare $grid globally for Isotope
+
+      // Menu Data (unchanged)
+      const menuData = {
+        'hot-coffee': {
+          title: 'Hot Coffee',
+          description: {
+            title: 'Premium Hot Coffee Selection',
+            text: 'Discover our expertly crafted hot coffee beverages, made with the finest beans and brewing techniques. From classic espresso to specialty lattes, each cup delivers rich flavor and aromatic excellence.'
+          },
+          filters: [
+            { name: 'All', filter: '*' },
+            { name: 'Espresso', filter: '.espresso' },
+            { name: 'Milk-based', filter: '.milk' },
+            { name: 'Specialty', filter: '.specialty' }
+          ],
+          items: [
+            {
+              id: 1,
+              name: 'Caffè Americano',
+              filters: ['espresso'],
+              description: 'Rich, full-bodied espresso with hot water. A classic coffee experience that highlights the pure essence of our premium beans.',
+              price: '$4.50',
+              image: 'https://images.unsplash.com/photo-1551030173-122aabc4489c?w=400&h=300&fit=crop'
+            },
+            {
+              id: 2,
+              name: 'Cappuccino',
+              filters: ['milk'],
+              description: 'Perfectly balanced espresso with steamed milk and a rich layer of foam. Dusted with cocoa powder for the perfect finish.',
+              price: '$5.25',
+              image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&h=300&fit=crop'
+            },
+            {
+              id: 3,
+              name: 'Caffè Latte',
+              filters: ['milk'],
+              description: 'Smooth espresso combined with steamed milk, creating a creamy and comforting coffee experience.',
+              price: '$5.75',
+              image: 'https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=400&h=300&fit=crop'
+            },
+            {
+              id: 4,
+              name: 'Espresso',
+              filters: ['espresso'],
+              description: 'Bold and intense shot of our signature espresso. The foundation of all great coffee drinks.',
+              price: '$3.25',
+              image: 'https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=400&h=300&fit=crop'
+            },
+            {
+              id: 5,
+              name: 'Macchiato',
+              filters: ['espresso', 'milk'],
+              description: 'Rich espresso "marked" with a dollop of steamed milk foam. A perfect balance of bold and smooth.',
+              price: '$4.75',
+              image: 'https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=400&h=300&fit=crop'
+            },
+            {
+              id: 6,
+              name: 'Mocha',
+              filters: ['milk', 'specialty'],
+              description: 'Decadent combination of espresso, steamed milk, and rich chocolate syrup. Topped with whipped cream.',
+              price: '$6.25',
+              image: 'images/Cappuccino.jpg'
+            }
+          ]
+        },
+        'cold-coffee': {
+          title: 'Cold Coffee',
+          description: {
+            title: 'Refreshing Cold Coffee Collection',
+            text: 'Beat the heat with our refreshing cold coffee beverages. From smooth cold brews to iced lattes, each drink is crafted to perfection for the ultimate cooling experience.'
+          },
+          filters: [
+            { name: 'All', filter: '*' },
+            { name: 'Iced', filter: '.iced' },
+            { name: 'Cold Brew', filter: '.cold-brew' },
+            { name: 'Blended', filter: '.blended' }
+          ],        
+          items: [
+            {
+              id: 7,
+              name: 'Iced Americano',
+              description: 'Refreshing cold version of our classic Americano. Bold espresso over ice with cold water.',
+              price: '$4.75',
+              image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=300&fit=crop',
+              filters: ['iced']
+            },
+            {
+              id: 8,
+              name: 'Cold Brew',
+              description: 'Smooth, slow-steeped coffee served cold. Less acidic and naturally sweet with a rich, bold flavor.',
+              price: '$5.50',
+              image: 'https://images.unsplash.com/photo-1517959105821-eaf2591984ca?w=400&h=300&fit=crop',
+              filters: ['cold-brew']
+            },
+            {
+              id: 9,
+              name: 'Iced Latte',
+              description: 'Creamy iced coffee with espresso and cold milk. Perfectly refreshing and smooth.',
+              price: '$5.95',
+              image: 'Hot Coffe/CaffeLatte.jpg',
+              filters: ['iced']
+            },
+            {
+              id: 10,
+              name: 'Vanilla Sweet Cream Cold Brew',
+              description: 'Our signature cold brew topped with vanilla sweet cream that cascades beautifully through the coffee.',
+              price: '$6.25',
+              image: 'https://images.unsplash.com/photo-1497515114629-f71d768fd07c?w=400&h=300&fit=crop',
+              filters: ['cold-brew', 'blended']
+            }
+          ]
+        },
+        'hot-tea': {
+          title: 'Hot Tea',
+          description: {
+            title: 'Premium Hot Tea Selection',
+            text: 'Explore our carefully curated collection of hot teas from around the world. From traditional black teas to exotic herbal blends, each cup offers a unique and soothing experience.'
+          },
+          filters: [
+            { name: 'All', filter: '*' },
+            { name: 'Black Tea', filter: '.black-tea' },
+            { name: 'Green Tea', filter: '.green-tea' },
+            { name: 'Herbal', filter: '.herbal' }
+          ],
+          items: [
+            {
+              id: 11,
+              name: 'Earl Grey',
+              description: 'Classic black tea with bergamot oil. A timeless blend with a distinctive citrusy aroma and flavor.',
+              price: '$3.75',
+              image: 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&h=300&fit=crop',
+              filters: ['black-tea']
+            },
+            {
+              id: 12,
+              name: 'Green Tea',
+              description: 'Delicate and refreshing green tea with subtle grassy notes. Rich in antioxidants and naturally energizing.',
+              price: '$3.50',
+              image: 'Hot Tea/SBX20211115_MatchaTeaLatte.jpg',
+              filters: ['green-tea']
+            },
+            {
+              id: 13,
+              name: 'Chamomile',
+              description: 'Soothing caffeine-free herbal tea with delicate floral notes. Perfect for relaxation and winding down.',
+              price: '$4.25',
+              image: 'Hot Tea/SBX20220411_ChaiLatte.jpg',
+              filters: ['herbal']
+            },
+            {
+              id: 14,
+              name: 'Chai Latte',
+              description: 'Spiced black tea with steamed milk. A warming blend of cardamom, cinnamon, ginger, and other aromatic spices.',
+              price: '$5.50',
+              image: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=400&h=300&fit=crop',
+              filters: ['black-tea', 'specialty']
+            }
+          ]
+        },
+        'refreshers': {
+          title: 'Refreshers',
+          description: {
+            title: 'Invigorating Refresher Drinks',
+            text: 'Quench your thirst with our vibrant and fruity refresher drinks. Made with real fruit juices and extracts, these beverages are perfect for a burst of flavor and energy.'
+          },
+          filters: [
+            { name: 'All', filter: '*' },
+            { name: 'Lemonade', filter: '.lemonade' },
+            { name: 'Coconut', filter: '.coconutmilk' },
+            { name: 'Fruit', filter: '.fruit' }
+          ],
+          items: [
+            {
+              id: 26,
+              name: 'Blackberry Sage Lemonade Refresher',
+              description: 'A delightful blend of sweet blackberries, aromatic sage, and tangy lemonade for a truly refreshing experience.',
+              price: '$20.00',
+              image: 'Cold Coffee/BlackberrySageLemonadeRefresher.jpg',
+              filters: ['lemonade', 'fruit']
+            },
+            {
+              id: 27,
+              name: 'Blackberry Sage Refresher',
+              description: 'The perfect balance of sweet blackberries and earthy sage, creating a unique and invigorating drink.',
+              price: '$15.00',
+              image: 'Cold Coffee/BlackberrySageRefresher.jpg',
+              filters: ['fruit']
+            },
+            {
+              id: 28,
+              name: 'Dragon Drink',
+              description: 'Exotic dragonfruit and sweet mango flavors blended with creamy coconut milk for a tropical escape.',
+              price: '$17.00',
+              image: 'Cold Coffee/DragonDrink.jpg',
+              filters: ['coconutmilk', 'fruit']
+            },
+            {
+              id: 29,
+              name: 'Midnight Drink',
+              description: 'A mysterious and delicious blend, perfect for a late-night treat.',
+              price: '$18.00',
+              image: 'Cold Coffee/MidnightDrink.jpg',
+              filters: ['coconutmilk']
+            },
+            {
+              id: 30,
+              name: 'Pink Drink',
+              description: 'Sweet strawberry acai with passion fruit and creamy coconut milk, a fan favorite for its vibrant color and taste.',
+              price: '$10.00',
+              image: 'Cold Coffee/PinkDrink.jpg',
+              filters: ['coconutmilk', 'fruit']
+            },
+            {
+              id: 31,
+              name: 'Mango Dragonfruit Lemonade Refreshers',
+              description: 'Tropical mango and dragonfruit flavors combined with zesty lemonade for a sweet and tart sensation.',
+              price: '$15.00',
+              image: 'Cold Coffee/SBX20211210_MangoDragonfruitLemonadeRefreshers.jpg',
+              filters: ['lemonade', 'fruit']
+            },
+            {
+              id: 32,
+              name: 'Strawberry Acai Lemonade Refreshers',
+              description: 'Sweet strawberry and acai berry flavors mixed with refreshing lemonade, a classic and popular choice.',
+              price: '$12.00',
+              image: 'Cold Coffee/SBX20211210_StrawberryAcaiLemonadeRefreshers.jpg',
+              filters: ['lemonade', 'fruit']
+            },
+            {
+              id: 33,
+              name: 'Summer Berry Refreshers',
+              description: 'A medley of summer berries blended for a sweet, tangy, and incredibly refreshing drink.',
+              price: '$14.00',
+              image: 'Cold Coffee/SummerBerryRefreshers.jpg',
+              filters: ['lemonade', 'fruit']
+            },
+            {
+              id: 34,
+              name: 'Strawberry Acai',
+              description: 'The simple yet delicious combination of sweet strawberries and exotic acai berries.',
+              price: '$10.00',
+              image: 'Cold Coffee/StrawberryAcai.jpg',
+              filters: ['fruit']
+            }
+          ]
+        },
+        'breakfast': {
+          title: 'Breakfast',
+          description: {
+            title: 'Fresh Breakfast Options',
+            text: 'Start your day right with our hearty breakfast selections. From fluffy pancakes to healthy oatmeal bowls, we have everything you need for a perfect morning meal.'
+          },
+          filters: [
+              { name: 'All', filter: '*' },
+              { name: 'Healthy', filter: '.healthy' },
+              { name: 'Classic', filter: '.classic' },
+              { name: 'Vegan', filter: '.vegan' }
+          ],
+          items: [
+            {
+              id: 15,
+              name: 'Avocado Toast',
+              description: 'Fresh avocado mashed with lime and seasoning on toasted artisan bread. Topped with everything bagel seasoning.',
+              price: '$8.95',
+              image: 'https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=400&h=300&fit=crop',
+              filters: ['healthy', 'vegan']
+            },
+            {
+              id: 16,
+              name: 'Breakfast Burrito',
+              description: 'Scrambled eggs, cheese, potatoes, and your choice of bacon or sausage wrapped in a warm tortilla.',
+              price: '$9.75',
+              image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=400&h=300&fit=crop',
+              filters: ['classic']
+            },
+            {
+              id: 17,
+              name: 'Pancakes',
+              description: 'Stack of three fluffy pancakes served with butter and maple syrup. Add berries for extra freshness.',
+              price: '$7.50',
+              image: 'https://www.realsimple.com/thmb/u0FflZ0sazXanhitWueM3LaXkaw=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/how-to-make-pancakes-step-by-step-bf45f02d4b3c4392bddf92e05c9e17eb.jpg',
+              filters: ['classic']
+            },
+            {
+              id: 18,
+              name: 'Overnight Oats',
+              description: 'Healthy oats soaked overnight with almond milk, topped with fresh berries and granola.',
+              price: '$6.25',
+              image: 'https://www.tastesoflizzyt.com/wp-content/uploads/2024/05/strawberry-banana-overnight-oats_-13.jpg',
+              filters: ['healthy', 'vegan']
+            }
+          ]
+        },
+        'bakery': {
+          title: 'Bakery',
+          description: {
+            title: 'Fresh Baked Goods',
+            text: 'Indulge in our freshly baked pastries, breads, and sweet treats. Made daily with premium ingredients and traditional techniques for the perfect taste and texture.'
+          },
+          filters: [
+            { name: 'All', filter: '*' },
+            { name: 'Pastries', filter: '.pastry' },
+            { name: 'Muffins', filter: '.muffin' },
+            { name: 'Bagels', filter: '.bagel' }
+          ],
+          items: [
+            {
+              id: 19,
+              name: 'Croissant',
+              description: 'Buttery, flaky pastry with a golden crust. Perfect on its own or with your favorite jam.',
+              price: '$3.25',
+              image: 'https://images.unsplash.com/photo-1549903072-7e6e0bedb7fb?w=400&h=300&fit=crop',
+              filters: ['pastry']
+            },
+            {
+              id: 20,
+              name: 'Blueberry Muffin',
+              description: 'Moist and fluffy muffin bursting with fresh blueberries. A classic breakfast treat.',
+              price: '$4.50',
+              image: 'https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=400&h=300&fit=crop',
+              filters: ['muffin']
+            },
+            {
+              id: 21,
+              name: 'Danish Pastry',
+              description: 'Light and airy pastry with sweet filling. Choose from apple, cherry, or cream cheese.',
+              price: '$4.75',
+              image: 'https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=400&h=300&fit=crop',
+              filters: ['pastry']
+            },
+            {
+              id: 22,
+              name: 'Bagel with Cream Cheese',
+              description: 'Fresh-baked bagel toasted to perfection, served with rich cream cheese spread.',
+              price: '$5.25',
+              image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&h=300&fit=crop',
+              filters: ['bagel']
+            }
+          ]
+        },
+        'lunch': {
+          title: 'Lunch',
+          description: {
+            title: 'Satisfying Lunch Options',
+            text: 'Enjoy our fresh and satisfying lunch selections, perfect for a midday meal. From hearty sandwiches to fresh salads, we have something for every appetite.'
+          },
+          filters: [
+            { name: 'All', filter: '*' },
+            { name: 'Sandwiches', filter: '.sandwich' },
+            { name: 'Salads', filter: '.salad' },
+            { name: 'Wraps', filter: '.wrap' }
+          ],
+          items: [
+            {
+              id: 23,
+              name: 'Grilled Chicken Sandwich',
+              description: 'Tender grilled chicken breast with lettuce, tomato, and avocado on artisan bread.',
+              price: '$11.95',
+              image: 'https://www.runza.com/_next/image?url=https%3A%2F%2Fdrupal.runza.com%2Fsites%2Fdefault%2Ffiles%2F_images%2Fproduct%2Fchicken_buffalo.png&w=1200&q=75',
+              filters: ['sandwich']
+            },
+            {
+              id: 24,
+              name: 'Caesar Salad',
+              description: 'Fresh romaine lettuce with parmesan cheese, croutons, and our signature Caesar dressing.',
+              price: '$9.50',
+              image: 'https://images.unsplash.com/photo-1551248429-40975aa4de74?w=400&h=300&fit=crop',
+              filters: ['salad']
+            },
+            {
+              id: 25,
+              name: 'Turkey Club Wrap',
+              description: 'Sliced turkey, bacon, lettuce, tomato, and mayo wrapped in a soft tortilla.',
+              price: '$10.75',
+              image: 'https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=400&h=300&fit=crop',
+              filters: ['wrap']
+            }
+          ]
+        }
+      };
+
+      // Function to update cart display (count on cart icon)
+      function updateCartDisplay() {
+        const cartCountElement = document.getElementById('cart-count');
+        if (cartCountElement) {
+          cartCountElement.textContent = cartCount;
+          cartCountElement.style.display = cartCount > 0 ? 'flex' : 'none';
+        }
+      }
+
+      // Function to update filter menu for a given category
+      function updateFiltersMenu(category) {
+        const filtersContainer = document.getElementById('filters-menu');
+        filtersContainer.innerHTML = ''; // Clear existing filters
+
+        const filters = menuData[category].filters || [
+          { name: 'All', filter: '*' }
+        ];
+
+        filters.forEach(filter => {
+          const li = document.createElement('li');
+          li.textContent = filter.name;
+          li.setAttribute('data-filter', filter.filter);
+          if (filter.filter === '*') {
+            li.classList.add('active');
+          }
+          filtersContainer.appendChild(li);
+        });
+
+        // Rebind click events for the newly created filter list items
+        $('#filters-menu li').off('click').on('click', function() {
+          $('#filters-menu li').removeClass('active');
+          $(this).addClass('active');
+
+          const selector = $(this).attr('data-filter');
+          if ($grid) { // Check if Isotope is initialized
+              $grid.isotope({ filter: selector });
+          }
+          return false;
+        });
+      }
+
+      // Function to load category content
+      function loadCategory(category) {
+        const data = menuData[category];
+        
+        if (!data) {
+          showEmptyState();
+          return;
+        }
+
+        // Update filters menu for the selected category
+        updateFiltersMenu(category);
+
+        // Show loading indicator
+        showLoading();
+        
+        // Simulate loading delay for better UX
+        setTimeout(() => {
+          // Update title
+          document.getElementById('category-title').textContent = data.title;
+          
+          // Update menu items
+          const menuItemsDiv = document.getElementById('menu-items');
+          menuItemsDiv.innerHTML = ''; // Clear previous items
+          
+          let itemsHtml = ''; // Use a string to build HTML efficiently
+          data.items.forEach(item => {
+            // Construct filter classes from item.filters array
+            const filterClasses = item.filters ? item.filters.join(' ') : '';
+            itemsHtml += `
+              <div class="col-sm-6 col-lg-4 all ${filterClasses} grid-item">
+                <div class="box">
+                  <div>
+                    <div class="img-box">
+                      <img src="${item.image}" alt="${item.name}" loading="lazy">
+                    </div>
+                    <div class="detail-box">
+                      <h5>${item.name}</h5>
+                      <p>${item.description || ''}</p> <!-- Add description if available -->
+                      <div class="options">
+                        <h6>${item.price}</h6>
+                        <button class="add-to-cart" onclick="addToCart(${item.id}, '${item.name}', '${item.price}')">
+                          <svg id="Capa_1" style="enable-background:new 0 0 456.029 456.029;" version="1.1" viewbox="0 0 456.029 456.029" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+                            <g><g><path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z"></path></g></g>
+                            <g><g><path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4C457.728,97.71,450.56,86.958,439.296,84.91z"></path></g></g>
+                            <g><g><path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z"></path></g></g>
+                          </svg>
+                          + add
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `;
+          });
+          menuItemsDiv.innerHTML = itemsHtml; // Insert all HTML at once
+          
+          // Hide loading indicator
+          hideLoading();
+
+          // Destroy existing Isotope instance if it exists
+          if ($grid && $grid.data('isotope')) {
+              $grid.isotope('destroy');
+          }
+
+          // Initialize Isotope after items are loaded
+          $grid = $('#menu-items').isotope({
+            itemSelector: '.grid-item', // Use .grid-item for item selection
+            layoutMode: 'fitRows'
+          });
+
+          // IMPORTANT: Relayout Isotope after all images are loaded
+          // This ensures Isotope calculates element heights correctly, pushing the footer down.
+          $grid.imagesLoaded().progress( function() {
+            $grid.isotope('layout');
+          });
+          
+          // Smooth scroll to content
+          document.getElementById('category-title').scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }, 500);
+      }
+
+      // Functions for loading state
+      function showLoading() {
+        document.getElementById('loading').style.display = 'block';
+        document.getElementById('menu-items').style.display = 'none';
+        document.getElementById('empty-state').style.display = 'none';
+      }
+
+      function hideLoading() {
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('menu-items').style.display = 'flex'; // Use flex to maintain grid layout
+      }
+
+      function showEmptyState() {
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('menu-items').style.display = 'none';
+        document.getElementById('empty-state').style.display = 'block';
+      }
+
+      // Cart related functions
+      function addToCart(itemId, itemName, itemPrice) {
+        // Add item to cart
+        const existingItem = cart.find(item => item.id === itemId);
+        
+        if (existingItem) {
+          existingItem.quantity += 1;
+        } else {
+          cart.push({
+            id: itemId,
+            name: itemName,
+            price: itemPrice,
+            quantity: 1
+          });
+        }
+        
+        cartCount++;
+        updateCartDisplay(); // Update cart count on icon
+        showCartNotification(itemName); // Show notification
+      }
+
+      function showCartNotification(itemName) {
+        const notification = document.getElementById('cart-notification');
+        const notificationText = document.getElementById('notification-text');
+        
+        notificationText.textContent = `${itemName} added to cart!`;
+        notification.classList.add('show');
+        
+        // Hide after 3 seconds
+        setTimeout(() => {
+          notification.classList.remove('show');
+        }, 3000);
+      }
+
+      function toggleCart() {
+        if (cart.length === 0) {
+          alert('Your cart is empty! Add some delicious items first.');
+          return;
+        }
+        
+        let cartItems = 'Your Cart:\n\n';
+        let total = 0;
+        
+        cart.forEach(item => {
+          // Ensure price is parsed correctly, handling '$'
+          const price = parseFloat(item.price.replace('$', ''));
+          cartItems += `${item.name} x${item.quantity} - $${(price * item.quantity).toFixed(2)}\n`;
+          total += price * item.quantity;
+        });
+        
+        cartItems += `\nTotal: $${total.toFixed(2)}`;
+        
+        alert(cartItems);
+      }
+
+      // DOM Content Loaded Event Listener
+      document.addEventListener('DOMContentLoaded', function() {
+        // Set current year in footer
+        document.getElementById('displayYear').textContent = new Date().getFullYear();
+        
+        // Load default category (e.g., 'refreshers' as per your original code)
+        loadCategory('refreshers');
+
+        // Initialize cart display on page load
+        updateCartDisplay();
+        
+        // Add click event listeners to sidebar links
+        document.querySelectorAll('.sidebar .nav-link').forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all links
+            document.querySelectorAll('.sidebar .nav-link').forEach(el => el.classList.remove('active'));
+            
+            // Add active class to clicked link
+            this.classList.add('active');
+            
+            // Get category and load content
+            const category = this.getAttribute('data-category');
+            if (category) {
+              loadCategory(category);
+            }
+          });
+        });
+      });
+    </script>
+</body>
+</html>

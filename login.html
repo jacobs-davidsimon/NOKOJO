@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Café Access</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  
+  <!-- Include SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: url('cafe_background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .blur-box {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 40px;
+      width: 350px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    }
+
+    .blur-box h2 {
+      text-align: center;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    label {
+      color: #fff;
+      font-weight: 300;
+      display: block;
+      margin-bottom: 8px;
+      margin-top: 15px;
+    }
+
+    select, input[type="password"], input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    select, input[type="text"], input[type="email"] {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    input[type="password"] {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .login-btn, .signup-btn {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background-color: #ffbe33;
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .login-btn:hover, .signup-btn:hover {
+      background-color: #a0522d;
+    }
+
+    .toggle-link {
+      text-align: center;
+      margin-top: 15px;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="blur-box" id="authBox">
+    <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Welcome to NOKOJO</h2>
+    <p id="authMessage">Please login to continue</p>
+    
+    <label for="role">Please select:</label>
+    <select id="role" name="role">
+      <option value="guest">Guest</option>
+      <option value="user">User</option>
+      <option value="admin">Admin</option>
+    </select>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter password" required>
+
+    <!-- Login Button -->
+    <button class="login-btn" onclick="login()">Login</button>
+
+    <!-- Sign Up Button -->
+    <button class="signup-btn" onclick="showSignUp()">Sign Up</button>
+
+    <div class="toggle-link" onclick="toggleAuthMode()">Don't have an account? Sign up</div>
+  </div>
+
+  <div class="blur-box" id="signUpBox" style="display: none;">
+    <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Sign Up to NOKOJO</h2>
+    <p id="signUpMessage">Please enter your details to create an account</p>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="Enter username" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="signUpPassword" name="password" placeholder="Enter password" required>
+
+    <button class="signup-btn" onclick="signUp()">Sign Up</button>
+    <div class="toggle-link" onclick="toggleAuthMode()">Already have an account? Login</div>
+  </div>
+
+  <script>
+    function login() {
+      const role = document.getElementById('role').value;
+      const password = document.getElementById('password').value;
+      
+      // For now, just show the SweetAlert as if the login was successful
+      Swal.fire({
+        icon: 'success',
+        title: 'Login Successful!',
+        text: 'Welcome to NOKOJO, ' + role.charAt(0).toUpperCase() + role.slice(1),
+        confirmButtonText: 'Proceed'
+      }).then(() => {
+        // Redirect to the homepage or the desired page after login success
+        window.location.href = 'menunew.html';
+      });
+    }
+
+    function signUp() {
+      const username = document.getElementById('username').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('signUpPassword').value;
+
+      // You would send the sign-up data to a server here
+      Swal.fire({
+        icon: 'success',
+        title: 'Sign Up Successful!',
+        text: 'Welcome to NOKOJO, ' + username,
+        confirmButtonText: 'Proceed'
+      }).then(() => {
+        // Redirect to the login screen after successful sign up
+        toggleAuthMode();
+      });
+    }
+
+    function toggleAuthMode() {
+      const loginBox = document.getElementById('authBox');
+      const signUpBox = document.getElementById('signUpBox');
+
+      if (loginBox.style.display === 'none') {
+        loginBox.style.display = 'block';
+        signUpBox.style.display = 'none';
+        document.getElementById('authMessage').innerText = 'Please login to continue';
+      } else {
+        loginBox.style.display = 'none';
+        signUpBox.style.display = 'block';
+        document.getElementById('signUpMessage').innerText = 'Please enter your details to create an account';
+      }
+    }
+
+    function showSignUp() {
+      toggleAuthMode();
+    }
+  </script>
+
+</body>
+</html>
